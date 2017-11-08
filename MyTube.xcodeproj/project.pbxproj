@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E5411861FB37DDA00402596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411851FB37DDA00402596 /* AppDelegate.swift */; };
-		2E5411881FB37DDA00402596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411871FB37DDA00402596 /* ViewController.swift */; };
-		2E54118B1FB37DDA00402596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5411891FB37DDA00402596 /* Main.storyboard */; };
+		2E5411881FB37DDA00402596 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411871FB37DDA00402596 /* HomeController.swift */; };
 		2E54118D1FB37DDA00402596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E54118C1FB37DDA00402596 /* Assets.xcassets */; };
 		2E5411901FB37DDA00402596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54118E1FB37DDA00402596 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		2E5411821FB37DDA00402596 /* MyTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5411851FB37DDA00402596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E5411871FB37DDA00402596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E54118A1FB37DDA00402596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E5411871FB37DDA00402596 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		2E54118C1FB37DDA00402596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E54118F1FB37DDA00402596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E5411911FB37DDA00402596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5411851FB37DDA00402596 /* AppDelegate.swift */,
-				2E5411871FB37DDA00402596 /* ViewController.swift */,
-				2E5411891FB37DDA00402596 /* Main.storyboard */,
+				2E5411871FB37DDA00402596 /* HomeController.swift */,
 				2E54118C1FB37DDA00402596 /* Assets.xcassets */,
 				2E54118E1FB37DDA00402596 /* LaunchScreen.storyboard */,
 				2E5411911FB37DDA00402596 /* Info.plist */,
@@ -125,7 +122,6 @@
 			files = (
 				2E5411901FB37DDA00402596 /* LaunchScreen.storyboard in Resources */,
 				2E54118D1FB37DDA00402596 /* Assets.xcassets in Resources */,
-				2E54118B1FB37DDA00402596 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5411881FB37DDA00402596 /* ViewController.swift in Sources */,
+				2E5411881FB37DDA00402596 /* HomeController.swift in Sources */,
 				2E5411861FB37DDA00402596 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +140,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2E5411891FB37DDA00402596 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E54118A1FB37DDA00402596 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E54118E1FB37DDA00402596 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,6 +263,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3JV2Y8V3K;
 				INFOPLIST_FILE = MyTube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurian.MyTube;
@@ -289,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3JV2Y8V3K;
 				INFOPLIST_FILE = MyTube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurian.MyTube;
