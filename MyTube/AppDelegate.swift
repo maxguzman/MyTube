@@ -7,6 +7,12 @@
 //
 
 import UIKit
+//
+//extension UIColor {
+//  static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+//    return UIColor(displayP3Red: red/255, green: green/255, blue: blue/255, alpha: 1)
+//  }
+//}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+    // changed by the extension (UIColor.rgb(...))
+    // UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+    UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+    
+    // invert status bar objets to white
+    application.statusBarStyle = .lightContent
+    
+    // create a view for status bar background coloring (darker color)
+    let statusBarBackgroundView = UIView()
+    statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+    
+    // add the view to window
+    window?.addSubview(statusBarBackgroundView)
+    window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+    window?.addConstraintWithFormat(format: "V:|[v0(20)]|", views: statusBarBackgroundView)
     
     return true
   }
