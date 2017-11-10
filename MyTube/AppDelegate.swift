@@ -1,18 +1,5 @@
-//
-//  AppDelegate.swift
-//  MyTube
-//
-//  Created by Max Guzman on 08-11-17.
-//  Copyright © 2017 Max Guzman. All rights reserved.
-//
-
 import UIKit
-//
-//extension UIColor {
-//  static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
-//    return UIColor(displayP3Red: red/255, green: green/255, blue: blue/255, alpha: 1)
-//  }
-//}
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,8 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
-    // changed by the extension (UIColor.rgb(...))
-    // UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+    
+    // change the nav bar backbround color
     UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
     
     // invert status bar objets to white
