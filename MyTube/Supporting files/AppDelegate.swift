@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // change the nav bar backbround color
     UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
     
+    //get rid of black line under Navigation Bar
+    UINavigationBar.appearance().shadowImage = UIImage()
+    UINavigationBar.appearance().setBackgroundImage(UIImage(), for:.default)
+    
     // invert status bar objets to white
     application.statusBarStyle = .lightContent
     
@@ -26,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // add the view to window
     window?.addSubview(statusBarBackgroundView)
     window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
-    window?.addConstraintWithFormat(format: "V:|[v0(20)]|", views: statusBarBackgroundView)
+    window?.addConstraintWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
     
     return true
   }
