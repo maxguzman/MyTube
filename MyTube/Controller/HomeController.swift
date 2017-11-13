@@ -21,6 +21,24 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
     
     setupMenuBar()
+    setupNavBarButtons()
+  }
+  
+  private func setupNavBarButtons() {
+    let searchImage = UIImage.init(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
+    let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
+    
+    let moreImage = UIImage.init(named: "nav_more_icon")?.withRenderingMode(.alwaysOriginal)
+    let moreButton = UIBarButtonItem(image: moreImage, style: .plain, target: self, action: #selector(handleMore))
+    navigationItem.rightBarButtonItems = [moreButton, searchBarButtonItem]
+  }
+  
+  @objc func handleMore() {
+    
+  }
+  
+  @objc func handleSearch() {
+    print("123")
   }
   
   let menuBar: MenuBar = {

@@ -18,6 +18,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     super.init(frame: frame)
     
     collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
+    
     addSubview(collectionView)
     addConstraintWithFormat(format: "H:|[v0]|", views: collectionView)
     addConstraintWithFormat(format: "V:|[v0]|", views: collectionView)

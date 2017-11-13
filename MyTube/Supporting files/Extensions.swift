@@ -1,11 +1,3 @@
-//
-//  Extensions.swift
-//  MyTube
-//
-//  Created by Max Guzman on 10-11-17.
-//  Copyright © 2017 Max Guzman. All rights reserved.
-//
-
 import UIKit
 
 extension UIColor {
