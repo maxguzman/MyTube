@@ -10,6 +10,9 @@
 		2E5411861FB37DDA00402596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411851FB37DDA00402596 /* AppDelegate.swift */; };
 		2E5411881FB37DDA00402596 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5411871FB37DDA00402596 /* HomeController.swift */; };
 		2E54118D1FB37DDA00402596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E54118C1FB37DDA00402596 /* Assets.xcassets */; };
+		2E55A5341FBE2848003CF3EC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55A5331FBE2848003CF3EC /* Video.swift */; };
+		2E55A5361FBE7AB4003CF3EC /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55A5351FBE7AB4003CF3EC /* BaseCell.swift */; };
+		2E55A5381FBE7BDB003CF3EC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55A5371FBE7BDB003CF3EC /* MenuCell.swift */; };
 		2E6F8C5D1FB6363200F6A2F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6F8C5C1FB6363200F6A2F3 /* Extensions.swift */; };
 		2E6F8C601FB6379F00F6A2F3 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6F8C5F1FB6379F00F6A2F3 /* VideoCell.swift */; };
 		2EE9445E1FB65F3100E2AA95 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE9445D1FB65F3100E2AA95 /* MenuBar.swift */; };
@@ -21,6 +24,9 @@
 		2E5411871FB37DDA00402596 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		2E54118C1FB37DDA00402596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E5411911FB37DDA00402596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E55A5331FBE2848003CF3EC /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		2E55A5351FBE7AB4003CF3EC /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		2E55A5371FBE7BDB003CF3EC /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		2E6F8C5C1FB6363200F6A2F3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2E6F8C5F1FB6379F00F6A2F3 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		2EE9445D1FB65F3100E2AA95 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 		2E5411841FB37DDA00402596 /* MyTube */ = {
 			isa = PBXGroup;
 			children = (
+				2E55A5321FBE2837003CF3EC /* Model */,
 				2E6F8C5E1FB6378800F6A2F3 /* View */,
 				2E6F8C611FB637D000F6A2F3 /* Controller */,
 				2EE9445A1FB65BF800E2AA95 /* Supporting files */,
@@ -63,11 +70,21 @@
 			path = MyTube;
 			sourceTree = "<group>";
 		};
+		2E55A5321FBE2837003CF3EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E55A5331FBE2848003CF3EC /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2E6F8C5E1FB6378800F6A2F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2E6F8C5F1FB6379F00F6A2F3 /* VideoCell.swift */,
+				2E55A5351FBE7AB4003CF3EC /* BaseCell.swift */,
 				2EE9445D1FB65F3100E2AA95 /* MenuBar.swift */,
+				2E55A5371FBE7BDB003CF3EC /* MenuCell.swift */,
+				2E6F8C5F1FB6379F00F6A2F3 /* VideoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,9 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5411881FB37DDA00402596 /* HomeController.swift in Sources */,
+				2E55A5341FBE2848003CF3EC /* Video.swift in Sources */,
 				2E6F8C601FB6379F00F6A2F3 /* VideoCell.swift in Sources */,
 				2E6F8C5D1FB6363200F6A2F3 /* Extensions.swift in Sources */,
+				2E55A5361FBE7AB4003CF3EC /* BaseCell.swift in Sources */,
 				2E5411861FB37DDA00402596 /* AppDelegate.swift in Sources */,
+				2E55A5381FBE7BDB003CF3EC /* MenuCell.swift in Sources */,
 				2EE9445E1FB65F3100E2AA95 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
