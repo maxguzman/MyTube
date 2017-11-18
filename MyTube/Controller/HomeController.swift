@@ -2,28 +2,6 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
-//  var videos: [Video] = {
-//
-//    var borutoChannel = Channel()
-//    borutoChannel.name = "BorutoChan"
-//    borutoChannel.profileImageName = "boruto"
-//
-//    var jojoVideo = Video()
-//    jojoVideo.thumbnailImage = "joseph"
-//    jojoVideo.title = "The Bangles - Walk Like an Egyptian"
-//    jojoVideo.channel = borutoChannel
-//    jojoVideo.numberOfViews = 423423424
-//
-//    var narutoVideo = Video()
-//    narutoVideo.thumbnailImage = "naruto"
-//    narutoVideo.title = "nobodyknows+ - Hero's Come Back!!"
-//    narutoVideo.channel = borutoChannel
-//    narutoVideo.numberOfViews = 432423
-//
-//    return [jojoVideo, narutoVideo]
-//
-//  }()
-  
   var videos: [Video]?
   
   func fetchVideos() {
@@ -34,45 +12,35 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         print(error!)
         return
       }
-      
-      do {
-        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-        // print(json)
-        
-        self.videos = [Video]()
-        
-        for dictionary in json as! [[String: Any]] {
+      if let data = data {
+        do {
+          let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+          self.videos = [Video]()
           
-          let video = Video()
-          video.title = dictionary["title"] as? String
-          video.thumbnailImage = dictionary["thumbnail_image_name"] as? String
+          for dictionary in json as! [[String: Any]] {
+            
+            let video = Video()
+            video.title = dictionary["title"] as? String
+            video.thumbnailImage = dictionary["thumbnail_image_name"] as? String
+            let channelDictionary =  dictionary["channel"] as! [String: Any]
+            let channel = Channel()
+            channel.name = channelDictionary["name"] as? String
+            channel.profileImageName = channelDictionary["profile_image_name"] as? String
+            video.channel = channel
+            
+            self.videos?.append(video)
+            
+          }
           
-          let channelDictionary =  dictionary["channel"] as! [String: Any]
+          DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+          }
           
-          let channel = Channel()
-          channel.name = channelDictionary["name"] as? String
-          channel.profileImageName = channelDictionary["profile_image_name"] as? String
-          
-          video.channel = channel
-          
-          self.videos?.append(video)
-          
-          // print(dictionary["title"] as Any)
+        } catch let jsonError {
+          print(jsonError)
         }
-        
-        DispatchQueue.main.async {
-          self.collectionView?.reloadData()
-        }
-        
-      } catch let jsonError {
-        print(jsonError)
       }
-      
-      // check the raw data
-      // let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-      // print(str)
-      
-      
+
     }.resume()
   }
   
@@ -124,8 +92,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     navigationItem.rightBarButtonItems = [moreButton, searchBarButtonItem]
   }
   
+  let settingsLauncher = SettingLauncher()
+  
   @objc func handleMore() {
-    // TODO: (implement this)
+    //show menu
+    settingsLauncher.showSettings()
   }
   
   @objc func handleSearch() {

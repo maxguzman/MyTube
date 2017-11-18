@@ -16,22 +16,9 @@ class VideoCell: BaseCell {
         subtitleTextView.text = subtitleText
       }
       
-//      if let thumbnainImage = video?.thumbnailImage {
-//        thumbnailImageView.image = UIImage(named: thumbnainImage)
-//      }
-      
       setupThumbnailImage()
-      
       setupProfileImage()
       
-//      if let profileImageName = video?.channel?.profileImageName {
-//        userProfileImageView.image = UIImage(named: profileImageName)
-//      }
-      
-      // could crash
-      // userProfileImageView.image = UIImage(named: (video?.channel?.profileImageName)!)
-      
-      // measure title text, for long texts -> 2 lines
       if let title = video?.title {
         let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
