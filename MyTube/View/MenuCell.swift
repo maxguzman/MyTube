@@ -10,13 +10,13 @@ class MenuCell: BaseCell {
   
   override var isHighlighted: Bool {
     didSet {
-      imageView.tintColor = isHighlighted ? .white : UIColor.rgb(red: 91, green: 14, blue: 13)
+      imageView.tintColor = isHighlighted ? .white : .rgb(red: 91, green: 14, blue: 13)
     }
   }
   
   override var isSelected: Bool {
     didSet {
-      imageView.tintColor = isSelected ? .white : UIColor.rgb(red: 91, green: 14, blue: 13)
+      imageView.tintColor = isSelected ? .white : .rgb(red: 91, green: 14, blue: 13)
     }
   }
   
@@ -29,6 +29,5 @@ class MenuCell: BaseCell {
     
     addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
     addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
-    
   }
 }

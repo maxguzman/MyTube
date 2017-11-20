@@ -18,6 +18,7 @@
 		2EE9445E1FB65F3100E2AA95 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE9445D1FB65F3100E2AA95 /* MenuBar.swift */; };
 		2EED81761FC0D78B00ECC552 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED81751FC0D78B00ECC552 /* CustomImageView.swift */; };
 		2EED81781FC0E62A00ECC552 /* SettingLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED81771FC0E62A00ECC552 /* SettingLauncher.swift */; };
+		2EED817A1FC276D300ECC552 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED81791FC276D300ECC552 /* SettingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2EE9445D1FB65F3100E2AA95 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		2EED81751FC0D78B00ECC552 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		2EED81771FC0E62A00ECC552 /* SettingLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLauncher.swift; sourceTree = "<group>"; };
+		2EED81791FC276D300ECC552 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				2E55A5371FBE7BDB003CF3EC /* MenuCell.swift */,
 				2E6F8C5F1FB6379F00F6A2F3 /* VideoCell.swift */,
 				2EED81751FC0D78B00ECC552 /* CustomImageView.swift */,
+				2EED81791FC276D300ECC552 /* SettingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				2EED81761FC0D78B00ECC552 /* CustomImageView.swift in Sources */,
 				2E55A5341FBE2848003CF3EC /* Video.swift in Sources */,
 				2E6F8C601FB6379F00F6A2F3 /* VideoCell.swift in Sources */,
+				2EED817A1FC276D300ECC552 /* SettingCell.swift in Sources */,
 				2E6F8C5D1FB6363200F6A2F3 /* Extensions.swift in Sources */,
 				2E55A5361FBE7AB4003CF3EC /* BaseCell.swift in Sources */,
 				2E5411861FB37DDA00402596 /* AppDelegate.swift in Sources */,

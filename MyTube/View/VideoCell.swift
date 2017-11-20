@@ -1,10 +1,8 @@
 import UIKit
 
 class VideoCell: BaseCell {
-  
   var video: Video? {
     didSet {
-      
       titleLabel.text = video?.title
       
       if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
@@ -37,7 +35,6 @@ class VideoCell: BaseCell {
   func setupProfileImage() {
     if let profileImageUrl = video?.channel?.profileImageName {
       userProfileImageView.loadImageUsing(urlString: profileImageUrl)
-      
     }
   }
   

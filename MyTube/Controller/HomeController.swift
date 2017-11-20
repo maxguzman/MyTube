@@ -5,23 +5,23 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
   var videos: [Video]?
   
   func fetchVideos() {
-    let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
-    URLSession.shared.dataTask(with: url!) { (data, response, error) in
-      
+    guard let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json") else { return }
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
       if error != nil {
         print(error!)
         return
       }
+      
       if let data = data {
         do {
           let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
           self.videos = [Video]()
           
           for dictionary in json as! [[String: Any]] {
-            
             let video = Video()
             video.title = dictionary["title"] as? String
             video.thumbnailImage = dictionary["thumbnail_image_name"] as? String
+            
             let channelDictionary =  dictionary["channel"] as! [String: Any]
             let channel = Channel()
             channel.name = channelDictionary["name"] as? String
@@ -29,18 +29,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             video.channel = channel
             
             self.videos?.append(video)
-            
           }
           
           DispatchQueue.main.async {
             self.collectionView?.reloadData()
           }
-          
         } catch let jsonError {
           print(jsonError)
         }
       }
-
     }.resume()
   }
   
@@ -54,7 +51,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     navigationController?.navigationBar.isTranslucent = false
     
     let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
-
     titleLabel.text = "Home"
     titleLabel.textColor = .white
     titleLabel.font = UIFont.systemFont(ofSize: 20)
@@ -67,7 +63,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     setupMenuBar()
     setupNavBarButtons()
-
   }
   
   // MARK: menu bar
